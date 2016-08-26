@@ -15,13 +15,13 @@ VyOSのFirewallには，以下の4つの機能（アクション）がある．
 
 1. in  
 インターフェースへ流入するトラフィックへ適応される  
-ex.) ` set interfaces ethernet eth0 firewall in <rule-name> `
+ex.) ` set interfaces ethernet eth0 firewall in name <rule-name> `
 2. out  
 インターフェースから流出するトラフィックへ適応される  
-ex.) ` set interfaces ethernet eth1 firewall out <rule-name> `
+ex.) ` set interfaces ethernet eth1 firewall out name <rule-name> `
 3. local  
 ルータ宛のトラフィックへのFirewallルールを適応する  
-ex.) ` set interfaces ethernet eth2 firewall local <rule-name> `
+ex.) ` set interfaces ethernet eth2 firewall local name <rule-name> `
 
 {host1}→in→{eth0 VyOS eth1}→out→{host2}  
 　　　　　　　　　eth2  
@@ -75,7 +75,7 @@ set interfaces ethernet eth0 firewall in name FW1
 が，ルールを設定する段階に当たる．  
 **ここで設定をしないと，作ったfirewallのルールが適用されることはないため，注意する**   
 ex.)eth4からくるルータ本体へ向かうパケットにルールFW2を適用する．  
-` set interfaces ethernet eth4 firewall local FW2 `
+` set interfaces ethernet eth4 firewall local name FW2 `
 
 ### firewallの確認
 ` show firewall `  

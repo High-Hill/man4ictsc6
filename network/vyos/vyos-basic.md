@@ -117,11 +117,11 @@ system {
 
 ### 設定ファイルの編集
 設定ファイルの編集には，
-1. set
-2. delete
-3. edit
-4. top
-5. commit
+1. set  
+2. delete  
+3. edit  
+4. top  
+5. commit  
 6. save  
 7. compare  
 8. rollback  
